@@ -1,0 +1,86 @@
+version: "2.0"
+
+stories:
+- story: greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+  # - action: utter_name
+  # - intent: my_name
+  # - action: utter_number
+  # - intent: my_number
+  # - action: utter_email
+  # - intent: my_email
+  # - action: action_saveconversation
+  - action: action_service
+
+- story: Buyer path
+  steps:
+  - intent: buyer
+  # - action: user_detail_form
+  # - action: action_submit
+  - action: utter_buyer
+  - action: action_service1
+
+- story: Buyer path 1
+  steps:
+  - intent: perfect_choices
+  - action: utter_where_from
+  - intent: where_from
+  - action: utter_areas
+  - intent: areas
+  - action: utter_num_bedrooms
+  - intent: num_bedrooms
+  - action: utter_num_bathroom
+  - intent: num_bathroom
+  - action: utter_more_info
+  - intent: more_info
+  - action: utter_price
+  - intent: price
+  - action: utter_end
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- story: Seller
+  steps:
+  - intent: seller
+  - action: utter_seller
+  - action: action_service2
+
+- story: Seller path 
+  steps:
+  - intent: details_property
+  - action: action_service3
+
+- story: Seller path affirm
+  steps:
+  - intent: affirm
+  - action: utter_ownership_period
+  - intent: ownership_period
+  - action: utter_selling_intention
+  - intent: selling_intention
+  - action: utter_selling_duration
+  - intent: selling_duration
+  - action: utter_condition_of_property
+  - intent: condition_of_property
+  - action: utter_current_living
+  - intent: current_living
+  - action: utter_property_address
+  - intent: property_address
+  - action: utter_meeting_schedule
+  - intent: meeting_schedule
+  - action: utter_goodbye
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- story: Seller path deny
+  steps:
+  - intent: deny
+  - action: utter_goodbye
+
+- story: time
+  steps:
+  - intent: time
+  - action: action_show_time
+# - intent: greet
+# - action: utter_greet

@@ -1,0 +1,151 @@
+version: "2.0"
+
+intents:
+  - greet
+  - time
+  - buyer
+  - perfect_choices
+  - where_from
+  - areas
+  - num_bedrooms
+  - num_bathroom
+  - more_info
+  - price
+  - seller
+  - details_property
+  - ownership_period
+  - selling_intention
+  - selling_duration
+  - property_address
+  - condition_of_property
+  - current_living
+  - meeting_schedule
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - my_name:
+      use_entities:
+        - name
+  - my_number:
+      use_entities:
+        - number
+  - my_email:
+      use_entities:
+        - email
+
+entities:
+  - name
+  - number
+  - email
+slots:
+  name:
+    type: text
+  number:
+    type: text
+  email:
+    type: text
+
+responses:
+  utter_greet:
+  - text: "Hello there!😄 we hope you are doing good. You are welcome to xyz company; this is real estate property dealer at your service. You can definitely trust us!🤗.
+      pleace visit in our website [here](https://www.apartments.com/ora-washington-dc/w33wxwj/).
+      We would help you to find the best property from all over the USA and hunt the potential buyers/sellers for your property as well."
+
+  utter_ask_name:
+  - text: "Enter your name: "
+
+  utter_ask_number:
+  - text: "Enter your Contect Number: "
+
+  utter_ask_email:
+  - text: "Enter your Email: "
+
+  utter_buyer:
+  - text: "Welcome Dear Buyer,"
+
+  utter_perfect_choices:
+  - text: "Well in that case, we have perfect home choices for you and your family. Can you elaborate what kind of property are you looking for? Should it be:"
+
+  utter_where_from:
+  - text: "May I know where are you contacting us from?"
+
+  utter_areas:
+  - text: "Noted! And what Areas are you interested in?"
+
+  utter_num_bedrooms:
+  - text: "Okay dear customer! What is the minimum number of bedrooms which you require?"
+
+  utter_num_bathroom:
+  - text: "And what about minimum number of bathrooms?"
+
+  utter_more_info:
+  - text: "Tell us more about any home or neighborhood features that are important to you and your family"
+
+  utter_price:
+  - text: "What would be your desired price range? As we offer many homes under the prices, starting from under $100k to $3M and up."
+
+  utter_end:
+  - text: "Certainly dear customer! We are currently looking into our listings to find the perfect home for you and your family."
+
+  utter_seller:
+  - text: "Welcome Dear Seller,"
+
+  utter_details_property:
+  - text: "Yes of course! You have come at the right place for that. Do you have some time so that I can ask you about some information, regarding to your property?"
+
+  utter_ownership_period:
+  - text: "How long have you owned this property?"
+
+  utter_selling_intention:
+  - text: "Wonderful! Why do you intend to sell this property?"
+
+  utter_selling_duration:
+  - text: "If you have decided to sell to us, would you like to do so within 30 days or some time further out?"
+
+  utter_property_address:
+  - text: "ok! Can you send us the full address of the property?"
+
+  utter_condition_of_property:
+  - text: "What is the general condition of this condo?"
+
+  utter_current_living:
+  - text: "Is anyone living in the property right now?"
+
+  utter_meeting_schedule:
+  - text: "Sounds Great! We have a client in our list who is just waiting to review this condo. If you find it fit, I will contect you first when I'm  coming for visit."
+
+  utter_goodbye:
+  - text: "We are glad to provide you our quality service. Do not forget to subscribe to our email for upcoming offers! Hope you have a good day. We hope you liked our service. \nCan not wait to hear from you soon! ✌☺"
+  - text: "Good bye! have a good day."
+
+  utter_detail_thanks:
+  - text: "Thanks for provieding you details. Is your provieded information is correct? \nName: {name} \nContact Number: {number} \nemail: {email}"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by ALGO_nlp."
+
+actions:
+  # - action_submit
+  - action_service
+  - action_hello_world
+  - action_service1
+  - action_service2
+  - action_service3
+  - action_show_time
+  # - user_detail_from
+  - action_saveconversation
+forms:
+  user_detail_form:
+    name:
+      - type: from_entity
+        entity: name
+    number:
+      - type: from_entity
+        entity: number
+    email:
+      - type: from_entity
+        entity: email
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

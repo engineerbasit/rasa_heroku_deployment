@@ -1,0 +1,276 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yeah shure
+    - go on
+    - yes you can ask
+    - yeah pleace
+    - not a problam
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: my_name
+  examples: |
+    - [ali]{"entity":"name","value":"ali"}
+    - my name is [abdullah]{"entity":"name","value":"abdullah"}
+    - I am [hamza]{"entity":"name","value":"hamza"}
+    - I'm [ahmed]{"entity":"name","value":"ahmed"}
+    - peopel cell me [ahsan]{"entity":"name","value":"ahsan"}
+    - you now i am [hassan]{"entity":"name","value":"hassan"}
+    - [ali]{"entity":"name","value":"ali"} is my name
+
+- intent: my_number
+  examples: |
+    - [09876543267]{"entity":"number","value":"09876543267"}
+    - [+92 3165347863]{"entity":"number","value":"+92 3165347863"}
+    - [+1 39894930]{"entity":"number","value":"+1 39894930"}
+    - my number is [0987887757]{"entity":"number","value":"0987887757"}
+    - note my number [00000543267]{"entity":"number","value":"00000543267"}
+    - [098762998267]{"entity":"number","value":"098762998267"} this is my number
+    - its my number [0987699777]{"entity":"number","value":"0987699777"}
+
+- intent: my_email
+  examples: |
+    - [abcsjj678@gmail.com]{"entity":"email","value":"abcsjj678@gmail.com"}
+    - my email is [hskkj.345@yahoo.edu]{"entity":"email","value":"hskkj.345@yahoo.edu"}
+    - [jsuuuo223.@icloud.edu.pk]{"entity":"email","value":"jsuuuo223.@icloud.edu.pk"} its my email
+    - note my email is [shiedni@gmail.com]{"entity":"email","value":"shiedni@gmail.com"}
+
+- intent: buyer
+  examples: |
+    - buyer
+    - buy
+    - you can help me for buy a property
+    - i want to buy property
+    - is property avalible for buy
+    - i am buyer
+    - I'm buyer
+    - I need to parches this property
+
+- intent: perfect_choices
+  examples: |
+    - I'm looking for single-family homes, as I just told you that me and my family are going to be shifted for residential purpose.
+    - Single-family home
+    - Condo
+    - Villa/Townhouse
+    - Manufactured Home
+    - Multi-Family
+    - Commercial
+    - Rental
+    - Commercial-lease
+    - Business opportunity
+    - I will go with condo
+
+- intent: where_from
+  examples: |
+    - I'm currently in a town near Campbell and I'm looking for homes in Campbell because we will be shifting there soon.
+    - i am contecting you from londen
+    - pakistan
+    - from new york
+    - sedny
+    - francesco
+
+- intent: areas
+  examples: |
+    - Campbell it is.
+    - I like lahore.
+    - it is sindh
+    - karachi
+
+- intent: num_bedrooms
+  examples: |
+    - The home should have at least 2 bedrooms, although 3 or more bedrooms would also be appreciated.
+    - i think its would 4 bedrooms.
+    - 5 bedrooms
+    - 2 bedrooms
+    - bedroom
+
+- intent: num_bathroom
+  examples: |
+    - At least 2 bathrooms would be best.
+    - attch bath
+    - 4 bathrooms
+    - bathroom
+
+- intent: more_info
+  examples: |
+    - Yes a few requests I would like to mention is that the home should be in a safe area and with a good neighborhood, it should have a good sight and any other complimentary features would also be appreciated big time!
+    - yeah if a pool is avaliable then its batter.
+    - i think it would be near to park. and there are so many peopels live in that area.
+    - hmm if there is tow garage then i will be happy and i want my home near to a beach.
+    - i don't want any problem about electricity. there is good liteing in house and a butifull view we see every day.
+    - i just need all thinks good.
+
+- intent: price
+  examples: |
+    - It should be in the range from $1M to $2M.
+    - my range is $80k to $1M.
+    - i can do it in $1.2M.
+    - yeah i have $5M.
+
+- intent: seller
+  examples: |
+    - Seller
+    - sell
+    - you can help me for sell a property
+    - i want to sell my property
+    - my property is avalible for sell
+    - i am Seller
+    - I'm seller
+
+
+- intent: details_property
+  examples: |
+    - details
+    - its my detail
+    - its detail
+    - i dont give my detail
+    
+- intent: ownership_period
+  examples: |    
+    - This condo was built in 1978 and I have been owning this property since then.
+    - this building is build on 1990 and I buy this aprtment on 2001
+    - i dont now how much old is this house.
+    - my greandfurther buy that home i think it is build in 1890
+    - i resantly buy this property i dont now how old it is!
+    - five years ago i buy this property
+    - 1990
+    - ownership
+    - ownership period
+    - my ownership period of this apartment is too long. my Grandfarther buy this.
+    - my farther buy this property
+
+
+- intent: selling_intention
+  examples: |   
+    - Because me and my family is going to get shifted in a month, in some other city, so we wanted to sell out this property while we are still here.
+    - our family is larg thats why we want to sell this apartment
+    - i come here for studys but now my studes is complited so i want to sell this apartment
+    - i need money thats why i sell this property.
+    - we are shifting thats why i want to sell it 
+    - there are some resanse thats way
+    - i want to buy a new property thats why
+    - its not important
+    - sorry i cant tell.
+
+- intent: selling_duration
+  examples: |   
+    - I would like to sell this in minimum 25 days, with complete paperwork.
+    - can you sell this in one month
+    - take your time i dont need it now
+    - if you sell it in 15 days than this is good but you shell complete it at lest in 20 days.
+    - sell it in 30 days.
+    - its depants on you.
+    - as fast as you can
+    - i am here now take it easy
+    - make it slow. I dont want to sell it this months
+    - its on you. take you time.
+    - Take your time.
+    - i want to sell it now 2 to 3 days
+
+- intent: property_address
+  examples: |   
+    - 2452 Tusitala St #901, Honolulu, HI 96815 in the Neighborhood: WAIKIKI.
+    - 4562 lansload St £804,  londan, AI 67852 in the hellowine: holls
+    - 3281 Tusalhis St #981, Houlu, HI 99365 in the Neighborhood: WAIKIKI.
+
+- intent: condition_of_property
+  examples: |   
+    - It is in a fairly good condition as I have renovated it recently, for the selling purpose.
+    - my house is in best condition you like it
+    - condition of home is very well. first look will make you to buy it
+    - in some sides you have to work but overall condition is good hope you like it
+    - now the condition is not good but if you work on it than it looks good
+    - its preety good
+    - its old but not in very bad condition
+    - okay candition you like it
+    - all thinks have an good condition
+    - conditions are not good
+    - if you think you can repare it than thats great.
+    - the walls are not in good candition but all our ferneture is in best condition.
+    - This is Mr. B and I'm currently reaching out from Honolulu, Hawaii.
+    - its not to good but i now you like it.
+    - my property is in good codition.
+    - In there we have 3 big rooms with atachbath, 1 kitchen, 1 tv lunch, parking place and some more features.
+    - I am the sole owner of this property.
+    - I have daubal storie house in first floor we have four rooms , one tv lunch  and parking on seconed floor we have five rooms with atechbath and one big kitchen.
+    - i got a old home from my greandfauther. and it is in landon.
+    - this property is good but a larg family could'nt live in there
+    - I tell all details when we meet.
+    - my house is larg it have 4 rooms more features
+
+- intent: current_living
+  examples: |   
+    - No, no one is living there. It is open for sale and visits.
+    - yes one old man is living there but if you want visit than most welcome
+    - yes my family is living thare but in two days we will leave.
+    - no one is there.
+    - yes there are some peopels but thay leave after 2 days.
+
+- intent: meeting_schedule
+  examples: |   
+    - Sure! I will wait for your cell.
+    - whan ever you like to came for visit. we wellcome you.
+    - Yes first inform me then i will tell you when apartment is free.
+    - okay meet you soon.
+    - fine I will wait for that meeting.
+    - i can wait for that meeting.
+
+- intent: time
+  examples: |   
+    - What is time now
+    - tell me time
+    - get the time
+    - what time is it
